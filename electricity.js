@@ -6,9 +6,12 @@ class Electricity {
   }
 
   function startUsing(appliance) {
+    this.appliancesInUse[appliance] = true;
   }
 
   function stopUsing(appliance) {
+    this.appliancesInUse[appliance] = false;
+    this.usageCounter ++;
   }
 
   function getTotalUsage() {
